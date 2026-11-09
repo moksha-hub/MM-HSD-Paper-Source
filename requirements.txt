@@ -1,0 +1,16 @@
+# Core Deep Learning & Audio/NLP Dependencies
+torch>=2.0.0
+accelerate>=0.28.0
+transformers==4.40.0
+openai-whisper>=20231117
+detoxify>=0.5.2
+soundfile>=0.12.1
+librosa>=0.10.1
+configargparse>=1.7
+wandb>=0.16.0
+pyyaml>=6.0.1
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.11.0
+tqdm>=4.66.0
+ffmpeg-python>=0.2.0

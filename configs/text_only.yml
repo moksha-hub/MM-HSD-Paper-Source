@@ -1,0 +1,50 @@
+# Configuration: Text Only (MM-HSD)
+run: text_only_T4
+
+# Training Hyperparameters
+batch_size: 8
+epochs: 40
+lr: 1.0e-05
+dropout: 0.4
+loss: CE
+patience: 10
+
+# Regularization
+lambda_l1: 1.0e-05
+lambda_l2: 0.0001
+
+# Modalities
+load_modalities:
+  - text
+include_modalities:
+  - text
+fusion: concat
+audio_mode: wav2vec
+
+# Feature Dimensions
+input_size_text: 768         # Detoxify / RoBERTa embeddings
+input_size_audio: 1024
+input_size_ocr: 768
+input_size_video: 768
+
+# Network Architecture
+hidden_size_1_general: 128
+hidden_size_2_general: 128
+hidden_size_2_audio: 80
+output_size: 64
+
+# Cross-Validation
+train_split_mode: automatic
+cross_fold: true
+folds: 5
+
+# Data Paths
+dir_frames: null
+dir_audio: data/features/audio
+dir_text: data/features/text/embeddings_detoxify.json
+dir_ocr: null
+
+# Logging & Output
+out_dir: results/text_only
+log_dir: results/text_only/logs
+log_wandb: false
